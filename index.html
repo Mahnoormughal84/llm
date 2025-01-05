@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    insta post api fetching
+    <button onclick="getpost()">post</button>
+    <form action="">
+        <div>
+            <label for="tweetid">tweetid</label>
+            <input type="text"name="tweetid"id="tweetid">
+        </div>
+        <div>
+            <label for="tweetimage">tweetimage</label>
+            <input type="text"name="tweetimage"id="tweetimage" >
+        </div>
+     
+        
+    </form>
+
+    <div id="tweets"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+    <!-- Update Post -->
+    <form onsubmit="updatePost(); return false;">
+        <div>
+          <label for="tweetId">Tweet ID</label>
+          <input type="text" name="tweetId" id="tweetId" />
+        </div>
+        <div>
+          <label for="tweetImage">Tweet Image</label>
+          <input type="text" name="tweetImage" id="tweetImage" />
+        </div>
+        <div>
+          <label for="tweetDescription">Tweet Description</label>
+          <input type="text" name="tweetDescription" id="tweetDescription" />
+        </div>
+  
+        <button type="submit">Update</button>
+      </form>
+ <!-- Save Post -->
+ <form onsubmit="savePost(); return false;">
+    <div>
+      <label for="tweetImage">Tweet Image</label>
+      <input type="text" name="tweetImage" id="newTweetImage" />
+    </div>
+    <div>
+      <label for="tweetDescription">Tweet Description</label>
+      <input type="text" name="tweetDescription" id="newTweetDescription" />
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+    <!-- Delete Post -->
+    <form onsubmit="deletePost(); return false;">
+        <div>
+          <label for="tweetIdToDelete">Tweet Id To Delete</label>
+          <input type="text" name="tweetImage" id="tweetIdToDelete" />
+        </div>
+  
+        <button type="submit">Delete</button>
+      </form>
+  
+      <div class="tweets"></div>  
+</body>
+</html>
